@@ -1,0 +1,33 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --cyan: #06b6d4;
+  }
+}
+
+::-webkit-scrollbar { width: 5px; }
+::-webkit-scrollbar-track { background: #111; }
+::-webkit-scrollbar-thumb { background: #333; border-radius: 3px; }
+
+@keyframes pulse-alarm {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.4; }
+}
+.animate-pulse-alarm {
+  animation: pulse-alarm 1s ease-in-out infinite;
+}
+
+@keyframes scan {
+  0% { transform: translateY(-100%); }
+  100% { transform: translateY(100vh); }
+}
+.scan-line {
+  animation: scan 6s linear infinite;
+}
+
+.glow-red { box-shadow: 0 0 30px rgba(239,68,68,0.25); }
+.glow-amber { box-shadow: 0 0 20px rgba(245,158,11,0.2); }
+.glow-emerald { box-shadow: 0 0 20px rgba(16,185,129,0.2); }
